@@ -13,13 +13,13 @@ CREATE TABLE IF NOT EXISTS customer(
 --@block
 INSERT INTO customer
 VALUES 
-    (2, 'Blessing Malik', 'bmalik@sandtech.com', '124 Happiness Ave.'),
-    (3, 'Obed Ehoneah', 'eobed@sandtech.com', '125 Happiness Ave.'),
-    (4, 'Nehemial Kamolu', 'nkamolu@sandtech.com', '126 Happiness Ave.')
+    (2, 'Blessing Malik', 'bmalik@sandtech.com', '124 Happiness  Ave.'),
+    (3, 'Obed Ehoneah', 'eobed@sandtech.com', '125 Happiness  Ave.'),
+    (4, 'Nehemial Kamolu', 'nkamolu@sandtech.com', '126 Happiness  Ave.')
 ;
 
 --@block
 SELECT * FROM customer;
 
 --@block
-DELETE FROM customer WHERE customer_id = 2;
+DELETE FROM customer WHERE customer_id = 4;
