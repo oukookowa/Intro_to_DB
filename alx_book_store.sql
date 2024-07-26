@@ -1,3 +1,6 @@
+-- # Create database if it does not exist
+CREATE DATABASE IF NOT EXISTS alx_book_store
+
 --@block
 -- # Create Books Table
 CREATE TABLE Books(
