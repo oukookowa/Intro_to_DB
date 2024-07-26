@@ -22,5 +22,5 @@ try:
 
     print("Database connection closed.")
 
-except Error as e:
-    print(f"Error: '{e}'")
+except mysql.connector.Error as error:
+    print(error)
