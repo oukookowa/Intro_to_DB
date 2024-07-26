@@ -11,17 +11,11 @@ try:
     )
 
     print(mydb.get_server_info())
-
+    # Create DB if not exist
     mycursor = mydb.cursor()
-    mycursor.execute("SELECT SCHEMA_NAME FROM INFORMATION_SCHEMA.SCHEMATA WHERE SCHEMA_NAME = 'alx_book_store'")
-    database_exists = mycursor.fetchone()
-
-    if not database_exists:
-        mycursor.execute("CREATE DATABASE alx_book_store")
-        print("Database 'alx_book_store' created successfully.")
-    else:
-        print("Database 'alx_book_store' already exists.")
-
+    mycursor.execute("CREATE DATABASE IF NOT EXISTS alx_book_store")
+    print("Database 'alx_book_store' created successfully!")
+    
     # Close connections
     mycursor.close()
     mydb.close()
