@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS customer(
 
 --@block
 INSERT INTO customer
-VALUES (1, 'Cole Baidoo', 'cbaidoo@sandtech.com', '123 Happiness Ave');
+VALUES (2, 'Cole Baidoo', 'alexba@sandtech.com', '123 Happiness Ave.');
 
 --@block
 SELECT * FROM customer;
