@@ -16,3 +16,6 @@ VALUES (2, 'Cole Baidoo', 'alexba@sandtech.com', '123 Happiness Ave.');
 
 --@block
 SELECT * FROM customer;
+
+--@block
+DELETE FROM customer WHERE customer_id = 2;
