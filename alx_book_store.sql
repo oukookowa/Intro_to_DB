@@ -33,8 +33,9 @@ CREATE TABLE Customers(
 -- # Create Orders Table
 CREATE TABLE Orders(
     order_id INT PRIMARY KEY AUTO_INCREMENT,
-    customer_id VARCHAR(215),
-    order_date DATE
+    customer_id INT,
+    order_date DATE,
+    FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)
 );
 
 --@block
@@ -48,3 +49,14 @@ CREATE TABLE Order_Details(
     FOREIGN KEY (order_id) REFERENCES Orders(order_id),
     FOREIGN KEY (book_id) REFERENCES Books(book_id)
 );
+
+--@block
+ALTER TABLE Orders
+DROP COLUMN customer_id;
+
+--@block
+ALTER TABLE Orders
+ADD customer_id INT;
+
+--@block
+ALTER TABLE Orders ADD CONSTRAINT customer_id FOREIGN KEY (customer_id) REFERENCES Customers (customer_id);
